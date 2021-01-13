@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="card card-index">
+    <p>
+      <strong>Titulo:</strong>
+      <%= @todo_list.title %>
+    </p>
+    <p>
+      <strong>Descripción:</strong>
+      <%= @todo_list.description %>
+    </p>
+    <div id="tasks_wrapper">
+      <%= render @todo_list.tasks %>
+      <div id="form">
+        <%= render "tasks/form" %>
+      </div>
+    </div>
+    <div class="mt-5">
+      <%= link_to 'Editar', edit_todo_list_path(@todo_list), class: "btn btn-primary" %>
+      <%= link_to 'Volver', todo_lists_path, class: "btn btn-warning"%>
+    </div>
+  </div>
+
+</div>
+

@@ -1,0 +1,16 @@
+<div class="row clearfix">
+  <ul>
+   <% if task.completed? %>
+    <div class="mr-5 ml-5 d-flex justify-content-between">
+      <li><p style="opacity: 0.4;"><strike><%= task.content %></strike></p></li>
+      <span class="mr-5 ml-5"><%= link_to "Tachar", complete_todo_list_task_path(@todo_list, task.id), method: :patch %></span>
+      <span class="mr-5 ml-5"><%= link_to "Borrar", todo_list_task_path(@todo_list, task.id), method: :delete, data: { confirm: "Seguro?" } %></span>
+    </div>
+    <% else %>
+      <div class="mr-5 ml-5 d-flex justify-content-between">
+        <li><p><%= task.content %></p></li>
+        <span class="mr-5 ml-5"><%= link_to "Tachar", complete_todo_list_task_path(@todo_list, task.id), method: :patch %></span>
+        <span class="mr-5 ml-5"><%= link_to "Borrar", todo_list_task_path(@todo_list, task.id), method: :delete, data: { confirm: "Seguro?" } %></span>
+   <% end %>
+  </ul>
+</div>
