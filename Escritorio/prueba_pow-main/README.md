@@ -1,6 +1,10 @@
-Rails APP creada por Eugenio Perez
+Rails APP creada por Eugenio Perez 
+Task Manager
 
-La app permite a un usuario registrarse,
-entrar a su perfil ver sus listas de tareas, poder editarlas y borrarlas.
-Crear nuevas tareas, ver las tareas dentro de sus listas y poder editarlas, borrarlas y marcarlas como completadas.
-Por ultimo el usuario puede desloguearse.
+
+La app permite:
+º Crear un usuario 
+º Iniciar sesión/Cerrar sesión
+º Entrar al index de las tareas 
+º Agregar/Editar/Borrar una lista de tareas 
+º Agregar/Marcar como finalizada/Borrar una tarea
